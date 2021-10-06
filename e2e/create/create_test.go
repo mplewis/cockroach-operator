@@ -18,7 +18,6 @@ package e2e
 
 import (
 	"flag"
-	"github.com/cockroachdb/cockroach-operator/bazel-cockroach-operator/pkg/actor"
 	"os"
 	"testing"
 	"time"
@@ -38,9 +37,6 @@ var parallel = *flag.Bool("parallel", false, "run tests in parallel")
 
 // run the pvc test
 var pvc = flag.Bool("pvc", false, "run pvc test")
-
-// TODO should we make this an atomic that is created by evn pkg?
-var env *testenv.ActiveEnv
 
 var validImage = "cockroachdb/cockroach:v21.1.7"
 var nonExistentImage = "cockroachdb/cockroach:v21.1.777"
@@ -146,8 +142,6 @@ func TestCreateSecureClusterWithInvalidVersion(t *testing.T) {
 
 	testLog := zapr.NewLogger(zaptest.NewLogger(t))
 
-	actor.Log = testLog
-
 	testcases := []struct {
 		imageVersion     string
 		cockroachVersion string
@@ -210,8 +204,6 @@ func TestCreateSecureClusterWithNonCRDBImage(t *testing.T) {
 	}
 
 	testLog := zapr.NewLogger(zaptest.NewLogger(t))
-
-	actor.Log = testLog
 
 	testcases := []struct {
 		imageVersion     string
