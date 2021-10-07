@@ -39,7 +39,7 @@ var parallel = *flag.Bool("parallel", false, "run tests in parallel")
 var pvc = flag.Bool("pvc", false, "run pvc test")
 
 var validImage = "cockroachdb/cockroach:v21.1.7"
-var nonExistentImage = "cockroachdb/cockroach:v21.1.777"
+var nonExistentImage = "cockroachdb/cockroach-non-existent:v21.1.999"
 var invalidImage = "nginx:latest"
 var crdbVersion = "v21.1.7"
 
