@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0
-	github.com/Masterminds/semver/v3 v3.1.0
+	github.com/Masterminds/semver/v3 v3.1.1
 	github.com/banzaicloud/k8s-objectmatcher v1.3.2
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/cockroachdb/errors v1.8.0
@@ -14,11 +14,11 @@ require (
 	github.com/go-logr/zapr v0.2.0
 	github.com/google/go-cmp v0.5.4
 	github.com/gosimple/slug v1.9.0
-	github.com/jackc/pgx/v4 v4.9.0
+	github.com/jackc/pgx/v4 v4.18.2
 	github.com/lithammer/shortuuid/v3 v3.0.7
 	github.com/octago/sflags v0.2.0
 	github.com/spf13/pflag v1.0.5
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.8.1
 	go.uber.org/zap v1.15.0
 	gopkg.in/yaml.v2 v2.4.0
 	k8s.io/api v0.20.2
